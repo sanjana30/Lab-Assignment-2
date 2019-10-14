@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>LocateMe</title>
+  <link rel="shortcut icon" type="image/png" href="locateme-icon-final.png">
+
+  <!-- include jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- include bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+    <!--Include Materialize -->
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">        
+
+  <!--include viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- fonts.google.com -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+    integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+    crossorigin="anonymous"></script>
+
+  <!-- css link -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+
+<body>
+
+  <!-- navigation bar section -->
+  <div class="navbar-fixed" id="top">
+    <nav style="background: #5D535E;">
+      <div class="nav-wrapper" style="padding-left: 15px; padding-right: 15px;">
+        <a href="#top"><img src="brand-logo-final.png" alt="brand-logo"  style="margin-top: auto; margin-bottom: auto;"></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#about">About</a></li>
+          <li><a href="badges.html">Task</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div> 
+
+  <!-- hero image section -->
+  <div class="parallax-container hero-parallax-div">
+    <div class="parallax hero-image-div">
+      <img src="buildings-colorful.jpg" class="hero-image">
+    </div>
+  </div>
+
+  <!-- about the company section -->
+  <div class="section white container about-container" id="about">
+    <div class="row">
+      <div class="col-lg-6 about-image"></div>
+      <div class="col-lg-6 about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.<br><br>
+        <a class="waves-effect waves-light btn button-style" data-toggle="modal" data-target="#locationModal">Get Started</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- contact section -->
+      <footer class="page-footer parallax-container footerstyle" id="contact">
+        <div class="container contactContainer">
+          <div class="row contactRow">
+            <div class="col l6 s12 contactAddressColumn">
+              <p class="white-text contactHeadings">LocateMe</p>
+              <p class="grey-text text-lighten-4 contactOfficeAddress">3522 S. Hills Drive, Austin, TX (78731)</p>
+            </div>
+            <div class="col l4 offset-l2 s12 contactAddressColumn">
+                <a class="grey-text text-lighten-3" href="mailto:locateme@gmail.com"><i class="material-icons small left">email</i>locateme@gmail.com</a>
+                <br><br>
+                <a class="grey-text text-lighten-3" href="#"><i class="material-icons small left">call</i>+1 (512) 765-7894</a>        
+            </div>
+          </div>
+        </div>
+      </footer>
+
+  <!-- locationModal -->
+  <div class="modal fade" id="locationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="margin: 0px; height: 100%; max-width: 100%;">
+      <div class="modal-content" style="height: 100%; width: 100%;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div id="map"></div>
+        </div>
+        <div class="modal-footer">
+            <a class="waves-effect waves-light btn button-style" data-dismiss="modal" >Close</a>
+          <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+          <a class="waves-effect waves-light btn button-style">OK</a>
+        </div>
+      </div>
+    </div>
+  </div>
+          
+  <!-- include javascript file -->
+  <script type="text/Javascript" src="./script.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaeZ9UE7NiTLEQNrXaJWc4DWC0s3Dgbws&callback=initMap">
+    </script>
+</body>
+
+</html>

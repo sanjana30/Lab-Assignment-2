@@ -1,0 +1,92 @@
+body{
+    width: 100%;
+}
+
+a:hover{
+    color: #ffffff;
+}
+
+.hero-parallax-div{
+    height: 80vh;
+}
+.hero-image-div{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    justify-content: center;
+    overflow: hidden;
+    height: 80vh;
+    width: 100%;
+}
+.hero-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+.about-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.about-image{
+    justify-content: center;
+    align-items: center;
+    background-image: url("about-image-7.png");
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.about-text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24 dp;
+}
+
+.button-style{
+    background-color: #5D535E;
+    color: #ffffff !important;
+}
+
+.footerstyle{
+    margin: 0 !important;
+    width: 100% !important;
+    height: 200px;
+    background-color: #5D535E;
+    color: #ffffff !important;
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 20px;
+    align-content: center;
+}
+
+.contactContainer{
+    height: 100%;
+    /* margin-top: auto;
+    margin-bottom: auto;
+    align-self: center; */
+}
+
+.contactRow{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+}
+.contactAddressColumn{
+    align-items: center;
+    vertical-align: middle;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.contactHeadings{
+    font-size: 20px;
+}
+
+.contactOfficeAddress{
+    font-size: 16px;
+}
+
+#map{
+    height: 100%;
+}
