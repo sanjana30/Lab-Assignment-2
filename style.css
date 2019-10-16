@@ -90,3 +90,29 @@ a:hover{
 #map{
     height: 100%;
 }
+
+/* instructions.html styles */
+.instructions-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.gototask-button-style{
+    text-align: center;
+}
+
+/* task.html styles */
+.task-container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.task-image-div{
+    border: 1px solid #5D535E;
+    padding: 10px;
+    text-align: center;
+}
+
+.task-page-body{
+    background-color: #ECF0F4;
+}

@@ -85,4 +85,17 @@ var eligibility = 0;
         infoWindow.open(map);
       }
 
-      
+      var canvas = document.getElementById("imageCanvas");
+      var ctx = canvas.getContext("2d");
+      var mouseClickedPositions = [];
+      var imageObj = new Image();
+      imageObj.onload = function(){
+          renderGraphics();
+      }
+      imageObj.src = "https://files.cdn.printful.com/upload/variant-image-jpg/21/2134a3fa668449b50adffcc6313aafb9_l";
+
+      function renderGraphics(){
+        ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
+        ctx.drawImage(imageObj,0, 0);
+        ctx.fillStyle = "#FF0000";
+      }
