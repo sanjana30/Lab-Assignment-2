@@ -85,17 +85,53 @@ var eligibility = 0;
         infoWindow.open(map);
       }
 
+      var mouseClickedPositions = [];
       var canvas = document.getElementById("imageCanvas");
       var ctx = canvas.getContext("2d");
-      var mouseClickedPositions = [];
       var imageObj = new Image();
       imageObj.onload = function(){
           renderGraphics();
       }
       imageObj.src = "https://files.cdn.printful.com/upload/variant-image-jpg/21/2134a3fa668449b50adffcc6313aafb9_l";
 
-      function renderGraphics(){
-        ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
-        ctx.drawImage(imageObj,0, 0);
-        ctx.fillStyle = "#FF0000";
-      }
+      
+      canvas.addEventListener('mousedown', function(event){
+        var mousePosition = getMousePosition(event);
+        mouseClickedPositions.push(mousePosition);
+        renderGraphics();
+      }, false);
+      window.addEventListener('keypress', function(event){
+        event.preventDefault();
+        mouseClickedPositions.pop();
+        renderGraphics();
+    });
+    function getMousePosition(event){
+        var mousePositionX = event.clientX;
+        var mousePositionY = event.clientY;
+        // the following command will get the coordinates for our canvas
+        var rect = canvas.getBoundingClientRect();
+        var xcoord = mousePositionX - rect.left;
+        var ycoord = mousePositionY - rect.top;
+        return {xcoord, ycoord};
+    }
+
+    function renderGraphics(){
+      ctx.clearRect(0, 0, canvas.clientWidth, canvas.height);
+      ctx.drawImage(imageObj,0, 0);
+      ctx.fillStyle = "#b3c100";
+      if(mouseClickedPositions.length > 0){
+        for(var i=0; i<mouseClickedPositions.length; i++){
+            var currentMousePosition = mouseClickedPositions[i];
+            ctx.fillRect(currentMousePosition.xcoord, currentMousePosition.ycoord, 5, 5);
+            if(i==0){
+                ctx.beginPath();
+            }
+            if(i > 0){
+                ctx.moveTo(mouseClickedPositions[i-1].xcoord, mouseClickedPositions[i-1].ycoord);
+                ctx.lineTo(currentMousePosition.xcoord, currentMousePosition.ycoord);
+                ctx.strokeStyle = "#34675c";
+                ctx.stroke();
+            }
+        }   
+    }
+    }
